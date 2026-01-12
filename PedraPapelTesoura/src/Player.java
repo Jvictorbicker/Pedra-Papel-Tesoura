@@ -25,7 +25,9 @@ public class Player {
                 playerChose = 3;
             case 4:
                 System.out.println("saindo...");
-                break;
+                return 0;
+            default:
+                System.out.println("Escolha inválida, tente novamente.\n");
         }
         return playerChose;
     }
