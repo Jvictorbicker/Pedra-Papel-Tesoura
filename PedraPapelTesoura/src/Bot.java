@@ -1,22 +1,24 @@
 import java.util.Random;
 
 public class Bot {
-    public static Controller.Plays Chose() {
-        Random random = new Random();
+    static Random random = new Random();
 
-        int escolha = random.nextInt(3) + 1;
+    public static Plays.possiblePlays botChoose() {
+        int option = random.nextInt(3) + 1;
 
-        switch (escolha) {
+        switch (option)  {
             case 1:
                 System.out.println("Bot escolheu Pedra");
-                return Controller.Plays.PEDRA;
+                return Plays.possiblePlays.PEDRA;
             case 2:
                 System.out.println("Bot escolheu Papel");
-                return Controller.Plays.PAPEL;
+                return Plays.possiblePlays.PAPEL;
             case 3:
                 System.out.println("Bot escolheu Tesoura");
-                return Controller.Plays.TESOURA;
+                return Plays.possiblePlays.TESOURA;
+            default:
+                System.out.println("Opção invalida, selecione um opcao Valida!");
         }
-        return Controller.Plays.SAIR;
+        return Plays.possiblePlays.SAIR;
     }
 }

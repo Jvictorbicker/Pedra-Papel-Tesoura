@@ -1,13 +1,13 @@
 public class Game {
-    public static void Playing() {
-        Controller.Plays escolhajogador = Player.escolhaPlayer();
+    public static void Start() {
+        Plays.possiblePlays escolhajogador = Player.playerChoose();
 
-        while (escolhajogador != Controller.Plays.SAIR) {
-            Controller.win(escolhajogador);
-            escolhajogador = Player.escolhaPlayer();
+        while (escolhajogador != Plays.possiblePlays.SAIR) {
+            Plays.win(escolhajogador);
+            escolhajogador = Player.playerChoose();
         }
     }
     public static void main(String[] args) {
-        Playing();
+        Start();
     }
 }
