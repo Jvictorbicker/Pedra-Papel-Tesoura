@@ -5,9 +5,8 @@ public class Controller {
         TESOURA,
         SAIR
     }
-    public static void win() {
+    public static void win(Controller.Plays escolhajogador) {
         Controller.Plays escolhabot = Bot.Chose();
-        Controller.Plays escolhajogador = Player.escolhaPlayer();
 
         if (escolhabot == escolhajogador) {
             System.out.println("Voces empataram, tente novamente !");

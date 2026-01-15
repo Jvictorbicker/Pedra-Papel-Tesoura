@@ -16,11 +16,7 @@ public class Bot {
             case 3:
                 System.out.println("Bot escolheu Tesoura");
                 return Controller.Plays.TESOURA;
-            case 4:
-                System.out.println("saindo...");
-                return Controller.Plays.SAIR;
-            default:
-                return null;
         }
+        return Controller.Plays.SAIR;
     }
 }

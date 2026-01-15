@@ -3,7 +3,7 @@ public class Game {
         Controller.Plays escolhajogador = Player.escolhaPlayer();
 
         while (escolhajogador != Controller.Plays.SAIR) {
-            Controller.win();
+            Controller.win(escolhajogador);
             escolhajogador = Player.escolhaPlayer();
         }
     }
